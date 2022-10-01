@@ -1,27 +1,37 @@
 ---
 import PowerTool from "../../../components/powertools/PowerTool.astro";
 import Overview from "../../../components/powertools/Overview.astro";
+import PowerTools from "../../../components/powertools/PowerTools.astro";
 ---
 
-<main id="PowerTools">
+<main id="PowerTools" class="">
 	<Overview />
+	<PowerTools>
+		<PowerTool name="Tester" question="What in the what?" pic="eod">
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate quia
+				sit cum nostrum quos dolorem esse, et perspiciatis? Distinctio a et ea
+				atque illum harum recusandae rem veritatis provident iure.
+			</p>
+		</PowerTool>
 
-	<PowerTool name="Tester" question="What in the what?" pic="eod" />
+		<PowerTool name="Analyzer" question="Who then?" pic="realtime">
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequuntur
+				nulla impedit sit omnis molestiae facere eos, cum aspernatur consequatur
+				laboriosam et quasi quos, reprehenderit facilis adipisci nobis odio
+				aperiam.
+			</p>
+		</PowerTool>
 
-	<PowerTool name="Analyzer" question="Who then?" pic="realtime">
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequuntur
-			nulla impedit sit omnis molestiae facere eos, cum aspernatur consequatur
-			laboriosam et quasi quos, reprehenderit facilis adipisci nobis odio
-			aperiam.
-		</p>
-	</PowerTool>
+		<PowerTool
+			name="Fundamentals"
+			question="I dont know about that"
+			pic="fundamental"
+		/>
 
-	<PowerTool
-		name="Do-Dad"
-		question="I dont know about that"
-		pic="fundamental"
-	/>
-
-	<PowerTool name="Forecaster" question="Whatever then?" pic="forecaster" />
+		<PowerTool name="Forecaster" question="Whatever then?" pic="forecaster" />
+	</PowerTools>
 </main>
+
+<style></style>

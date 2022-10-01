@@ -3,19 +3,21 @@ const { question, name, pic } = Astro.props;
 const image = `/images/trader-${pic}.png`;
 ---
 
-<section>
-	<div class="container mx-auto mb-6">
-		<div class="powertool">
-			<h2>{name}</h2>
-			<img src={image} width="300" height="200" alt="" />
-			<h3>{question}</h3>
-			<slot>
-				<p>Answer Blurb</p>
-			</slot>
-			<button class="btn">Watch the video</button>
+<article class:list={["PowerTool", name]}>
+	<div class="px-4 mb-6">
+		<div class="powertool flex gap-4 flex-col md:flex-row">
+			<img class="aspect-square" src={image} width="300" height="300" alt="" />
+			<div class="blurb space-y-6">
+				<h2>{name}</h2>
+				<h3>{question}</h3>
+				<slot>
+					<p>Answer Blurb</p>
+				</slot>
+				<button class="btn mt-auto">Watch the video</button>
+			</div>
 		</div>
 	</div>
-</section>
+</article>
 
 <style lang="scss">
 	.powertool {
@@ -28,6 +30,10 @@ const image = `/images/trader-${pic}.png`;
 
 		.btn {
 			@apply px-6 py-2 bg-blue-700 text-white rounded-lg;
+		}
+
+		img {
+			@apply inline-block;
 		}
 	}
 </style>
