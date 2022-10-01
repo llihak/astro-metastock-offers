@@ -5,3 +5,11 @@
 .wtw {
 	color: purple;
 }
+
+h2 {
+	font-size: 2rem;
+}
+
+.btn {
+	@apply bg-blue-600 text-white;
+}

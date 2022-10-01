@@ -1,0 +1,33 @@
+---
+const { question, name, pic } = Astro.props;
+const image = `/images/trader-${pic}.png`;
+---
+
+<section>
+	<div class="container mx-auto mb-6">
+		<div class="powertool">
+			<h2>{name}</h2>
+			<img src={image} width="300" height="200" alt="" />
+			<h3>{question}</h3>
+			<slot>
+				<p>Answer Blurb</p>
+			</slot>
+			<button class="btn">Watch the video</button>
+		</div>
+	</div>
+</section>
+
+<style lang="scss">
+	.powertool {
+		h2 {
+			font-size: 1.5rem;
+		}
+		h3 {
+			font-size: 1.25rem;
+		}
+
+		.btn {
+			@apply px-6 py-2 bg-blue-700 text-white rounded-lg;
+		}
+	}
+</style>

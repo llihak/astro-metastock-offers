@@ -1,38 +1,17 @@
 ---
+import OriginalContent from "../components/OriginalContent.astro";
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to MetaStock Offers">
 	<main>
 		<h1 class="text-4xl text-red-700">MetaStock Offers using Astro</h1>
-		<p class="instructions wtw">
-			To get started, open the directory <code>src/pages</code> in your project.<br
-			/>
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<div class="page-links flex flex-col">
+			<a href="/offers/">OFFERS</a>
+			<a href="/offers/powertools/">powertools page</a>
+		</div>
+
+		<!-- <OriginalContent /> -->
 	</main>
 </Layout>
 
